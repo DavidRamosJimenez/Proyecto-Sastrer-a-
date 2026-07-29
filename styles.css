@@ -5,22 +5,40 @@
 }
 
 body {
-
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-
     background-color: #f4f4f4; 
     color: #333333;
 }
 
 /* Header y Footer */
 header {
-    background-color: #2c3e50; /* Azul marino clásico */
+    background-color: #2c3e50; 
     color: #ffffff;
     text-align: center;
     padding: 2.5rem 0;
     margin-bottom: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #e67e22;
 }
 
 footer {
@@ -32,33 +50,30 @@ footer {
 }
 
 /* Main y Secciones */
-
 main {
     max-width: 800px; 
     margin: 0 auto;
     padding: 0 20px;
 }
 
- /* Section */
+/* Section */
 section {
     background-color: #ffffff;
     padding: 2rem;
     margin-bottom: 2rem;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave para darle profundidad */
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
 }
 
 h2 {
     color: #2c3e50;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #e67e22; /* Acento color naranja/dorado */
+    border-bottom: 2px solid #e67e22; 
     padding-bottom: 0.5rem;
 }
 
-
-   /* Formulario */
-
-.campo-formulario {
+/* Formulario */
+.campoFormulario {
     margin-bottom: 1.5rem;
 }
 
@@ -96,4 +111,20 @@ button {
 
 button:hover {
     background-color: #d35400; 
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    section {
+        padding: 1.5rem 1rem; 
+    }
+
+    header {
+        padding: 1.5rem 0;
+    }
 }
