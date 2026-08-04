@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2b2b2b;
+    background-color: #f5f0e6;
+}
+
+header {
+    background-color: #2b2b2b;
+    color: #f5f0e6;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #f5f0e6;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c9a35d;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #c9a35d;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #2b2b2b;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    background-color: #2b2b2b;
+    color: #f5f0e6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c9a35d;
+}
+
+/* Reglas Parcial */
+.oculto { display: none; }
+
+#mensaje {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #c9a35d;
+    border-radius: 4px;
+    color: #2b2b2b;
+    background-color: #f5f0e6;
+}
+
+footer {
+    background-color: #2b2b2b;
+    color: #f5f0e6;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Para Celular */
+@media (max-width: 600px) {
+    nav {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
