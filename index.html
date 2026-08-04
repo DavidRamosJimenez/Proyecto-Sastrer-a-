@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sastrería Jimenez</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sastrería Jimenez</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Sastreria Jimenez</h1>
+<header>
+<h1>Sastreria Jimenez</h1>
 
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<nav>
+<ul class="nav-menu">
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Servicios</a></li>
+<li><a href="#">Contacto</a></li>
+<li>
+<button id="theme-toggle" type="button" class="theme-toggle" aria-label="Cambiar tema">
+<span class="icon-sun">☀️</span>
+<span class="icon-moon">🌙</span>
+</button>
+</li>
+</ul>
+</nav>
+</header>
 
-    <main>
-        
-        <!-- Seleccion Formulario -->
-        <section class="contacto">
-            <h2>Formulario de Contacto</h2>
-            <form action="">
-                
-                <div class="campoFormulario">
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
+<main>
 
-                <div class="campoFormulario">
-                    <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo" required>
-                </div>
+<section class="contacto">
+<h2>Formulario de Contacto</h2>
+<form action="">
 
-                <div class="campoFormulario">
-                    <label for="mensaje">Detalle del arreglo o consulta:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                </div>
+<div class="campoFormulario">
+<label for="nombre">Nombre completo:</label>
+<input type="text" id="nombre" name="nombre" required>
+</div>
 
-                <button type="submit">Enviar mensaje</button>
-                
-            </form>
-        </section>
-    </main>
+<div class="campoFormulario">
+<label for="correo">Correo electrónico:</label>
+<input type="email" id="correo" name="correo" required>
+</div>
 
-    <footer>
-        <p>&copy; 2026 Sastrería Jimenez.</p>
-    </footer>
+<div class="campoFormulario">
+<label for="mensaje">Detalle del arreglo o consulta:</label>
+<textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+</div>
 
+<button type="submit">Enviar mensaje</button>
+
+</form>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 Sastrería Jimenez.</p>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
