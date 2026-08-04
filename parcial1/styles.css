@@ -104,7 +104,6 @@ button:hover {
     background-color: #c9a35d;
 }
 
-/* Reglas Parcial */
 .oculto { display: none; }
 
 #mensaje {
@@ -123,7 +122,7 @@ footer {
     padding: 15px;
 }
 
-/* Para Celular */
+/* movile */
 @media (max-width: 600px) {
     nav {
         display: block;

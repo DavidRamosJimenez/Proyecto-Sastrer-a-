@@ -1,10 +1,8 @@
-// Jhonathan David Ramos Jimenez
-
-function confirmarCita() {
+function confirmarTurno() {
     var mensaje = document.querySelector("#mensaje");
-    mensaje.textContent = "Cita recibida - te atiende Jhonathan David Ramos Jimenez";
+    mensaje.textContent = "Turno recibido - te atiende Jhonathan David Ramos Jimenez";
     mensaje.classList.remove("oculto");
 }
 
 var boton = document.querySelector("#btn-confirmar");
-boton.addEventListener("click", confirmarCita);
+boton.addEventListener("click", confirmarTurno);
