@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Mirasol</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Óptica Mirasol</h1>
+        <p>Óptica de barrio con atencion cercana: te agendamos tu cita para examen de vista, armazones y lentes de sol.</p>
+    </header>
+
+    <main>
+        <form id="form-cita" novalidate method="POST" action="procesar.php">
+            <div>
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div>
+                <label for="correo">Correo Electronico</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div>
+                <label for="consulta">Sobre Que Quiere Consultar:</label>
+                <textarea id="consulta" name="consulta"></textarea>
+            </div>
+
+            <button type="submit">Pedir mi cita</button>
+
+            <p id="aviso-cita" class="aviso"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Parcial 2 - Jhonathan David Ramos Jimenez - 11 de agosto de 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
