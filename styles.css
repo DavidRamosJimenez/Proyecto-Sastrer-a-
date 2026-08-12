@@ -95,9 +95,7 @@ margin-top: 3rem;
 transition: background-color 0.3s ease;
 }
 
-/* =====================================================
-   BOTÓN DE TEMA (con alta especificidad para evitar conflictos)
-   ===================================================== */
+/*BOTÓN DE TEMA (con alta especificidad para evitar conflictos)*/
 button#theme-toggle.theme-toggle {
 background-color: transparent;
 border: 2px solid var(--header-text);
@@ -124,9 +122,7 @@ transform: rotate(15deg);
 body.dark-mode .icon-sun { display: none; }
 body.dark-mode .icon-moon { display: inline; }
 
-/* =====================================================
-   MAIN Y SECCIONES
-   ===================================================== */
+/* MAIN Y SECCIONES*/
 main {
 max-width: 800px;
 margin: 0 auto;
@@ -150,9 +146,7 @@ padding-bottom: 0.5rem;
 transition: color 0.3s ease;
 }
 
-/* =====================================================
-   FORMULARIO
-   ===================================================== */
+/*FORMULARIO*/
 .campoFormulario {
 margin-bottom: 1.5rem;
 }
@@ -181,7 +175,7 @@ outline: none;
 border-color: var(--accent);
 }
 
-/* SOLO afecta al botón submit del formulario, NO al de tema */
+/*SOLO afecta al botón submit del formulario*/
 form > button[type="submit"] {
 background-color: var(--accent);
 color: #ffffff;
@@ -198,9 +192,7 @@ form > button[type="submit"]:hover {
 background-color: var(--accent-hover);
 }
 
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
+/*RESPONSIVE*/
 @media (max-width: 600px) {
 .nav-menu {
 flex-direction: column;

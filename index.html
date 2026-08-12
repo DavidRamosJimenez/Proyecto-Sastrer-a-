@@ -30,7 +30,7 @@
 
 <section class="contacto">
 <h2>Formulario de Contacto</h2>
-<form action="">
+<form id="form-contacto" novalidate method="POST" action="procesar.php">
 
 <div class="campoFormulario">
 <label for="nombre">Nombre completo:</label>
@@ -48,6 +48,8 @@
 </div>
 
 <button type="submit">Enviar mensaje</button>
+
+<p id="aviso" class="aviso"></p>
 
 </form>
 </section>

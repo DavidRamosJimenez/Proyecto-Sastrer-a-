@@ -31,3 +31,33 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     console.log('Cambió a:', isDark ? 'oscuro' : 'claro');
 });
+
+
+// Validación del formulario de contacto
+
+const formulario = document.querySelector("#form-contacto");
+const aviso = document.querySelector("#aviso");
+
+function manejarEnvio(event) {
+    const nombre = document.querySelector("#nombre").value;
+    const correo = document.querySelector("#correo").value;
+    const mensaje = document.querySelector("#mensaje").value;
+
+    if (nombre === "" || correo === "" || mensaje === "") {
+        event.preventDefault();
+        aviso.textContent = "Completa tu nombre, correo y mensaje para enviar la consulta.";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+    } else if (!correo.includes("@")) {
+        event.preventDefault();
+        aviso.textContent = "Ese correo está mal escrito: le falta el arroba.";
+        aviso.classList.add("error");
+        aviso.classList.remove("exito");
+    } else {
+        aviso.textContent = "Mensaje enviado - te responde Jhonathan David Ramos Jimenez";
+        aviso.classList.add("exito");
+        aviso.classList.remove("error");
+    }
+}
+
+formulario.addEventListener("submit", manejarEnvio);
