@@ -11,7 +11,7 @@ $mensaje = $_POST["mensaje"] ?? "";
 
 $servicios = [
     "Confección de Traje Masculino - Bs 600",
-   "Confección de Traje Femenino - Bs 600",
+   "Confección de Traje Femenino - Bs 500",
     "Arreglo (depende el arreglo variada el precio) - Bs 15",
 ];
 ?>
@@ -19,17 +19,17 @@ $servicios = [
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Consulta recibida - Sastrería Jimenez</title>
+    <title>Consulta recibida - Sastreria Jimenez</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-    <h1>Sastrería Jimenez</h1>
+    <h1>Sastreria Jimenez</h1>
 </header>
 
 <main>
-    <h2>Consulta recibida en Sastrería Jimenez</h2>
+    <h2>Consulta recibida en Sastreria Jimenez</h2>
 
     <p><strong>Nombre:</strong> <?php echo htmlspecialchars($nombre); ?></p>
     <p><strong>Correo:</strong> <?php echo htmlspecialchars($correo); ?></p>
@@ -48,7 +48,7 @@ $servicios = [
 </main>
 
 <footer>
-    <p>&copy; 2026 Sastrería Jimenez.</p>
+    <p>&copy; 2026 Sastreria Jimenez.</p>
 </footer>
 
 </body>
