@@ -1,0 +1,225 @@
+/* =====================================================
+   VARIABLES DE TEMA CLARO
+   ===================================================== */
+:root {
+--bg-color: #f4f4f4;
+--text-color: #333333;
+--header-bg: #2c3e50;
+--header-text: #ffffff;
+--section-bg: #ffffff;
+--label-color: #2c3e50;
+--shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+--input-border: #cccccc;
+--input-bg: #ffffff;
+--input-text: #333333;
+--accent: #e67e22;
+--accent-hover: #d35400;
+}
+
+/* =====================================================
+   VARIABLES DE TEMA OSCURO
+   ===================================================== */
+body.dark-mode {
+--bg-color: #1a1a1a;
+--text-color: #e6e6e6;
+--header-bg: #0f1419;
+--header-text: #f1f1f1;
+--section-bg: #2a2a2a;
+--label-color: #f1f1f1;
+--shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+--input-border: #444444;
+--input-bg: #1f1f1f;
+--input-text: #f1f1f1;
+--accent: #e67e22;
+--accent-hover: #d35400;
+}
+
+/* =====================================================
+   RESET Y BASE
+   ===================================================== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Helvetica Neue', Arial, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+background-color: var(--bg-color);
+color: var(--text-color);
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =====================================================
+   HEADER Y FOOTER
+   ===================================================== */
+header {
+background-color: var(--header-bg);
+color: var(--header-text);
+text-align: center;
+padding: 2.5rem 0;
+margin-bottom: 2rem;
+transition: background-color 0.3s ease;
+}
+
+.nav-menu {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+list-style: none;
+margin-top: 1.5rem;
+flex-wrap: wrap;
+}
+
+.nav-menu a {
+color: var(--header-text);
+text-decoration: none;
+padding: 0.5rem 1rem;
+border-radius: 5px;
+transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+background-color: var(--accent);
+}
+
+footer {
+background-color: var(--header-bg);
+color: var(--header-text);
+text-align: center;
+padding: 1.5rem 0;
+margin-top: 3rem;
+transition: background-color 0.3s ease;
+}
+
+/*BOTÓN DE TEMA (con alta especificidad para evitar conflictos)*/
+button#theme-toggle.theme-toggle {
+background-color: transparent;
+border: 2px solid var(--header-text);
+color: var(--header-text);
+padding: 0;
+font-size: 1.1rem;
+border-radius: 50%;
+cursor: pointer;
+width: 42px;
+height: 42px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+button#theme-toggle.theme-toggle:hover {
+background-color: var(--accent);
+border-color: var(--accent);
+transform: rotate(15deg);
+}
+
+.icon-moon { display: none; }
+body.dark-mode .icon-sun { display: none; }
+body.dark-mode .icon-moon { display: inline; }
+
+/* MAIN Y SECCIONES*/
+main {
+max-width: 800px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+section {
+background-color: var(--section-bg);
+padding: 2rem;
+margin-bottom: 2rem;
+border-radius: 10px;
+box-shadow: var(--shadow);
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2 {
+color: var(--label-color);
+margin-bottom: 1.5rem;
+border-bottom: 2px solid var(--accent);
+padding-bottom: 0.5rem;
+transition: color 0.3s ease;
+}
+
+/*ERRORES DE VALIDACIÓN*/
+.errores {
+background-color: #fdecea;
+border: 1px solid #f5c6cb;
+color: #842029;
+padding: 1rem 1.5rem;
+border-radius: 5px;
+margin-bottom: 1.5rem;
+list-style: none;
+}
+
+/*SERVICIOS*/
+.servicios li {
+margin-bottom: 0.5rem;
+}
+
+/*FORMULARIO*/
+.campoFormulario {
+margin-bottom: 1.5rem;
+}
+
+label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: bold;
+color: var(--label-color);
+transition: color 0.3s ease;
+}
+
+input, textarea {
+width: 100%;
+padding: 10px;
+border: 1px solid var(--input-border);
+background-color: var(--input-bg);
+color: var(--input-text);
+border-radius: 5px;
+font-family: inherit;
+transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+outline: none;
+border-color: var(--accent);
+}
+
+/*SOLO afecta al botón submit del formulario*/
+form > button[type="submit"] {
+background-color: var(--accent);
+color: #ffffff;
+border: none;
+padding: 12px 24px;
+font-size: 16px;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+form > button[type="submit"]:hover {
+background-color: var(--accent-hover);
+}
+
+/*RESPONSIVE*/
+@media (max-width: 600px) {
+.nav-menu {
+flex-direction: column;
+gap: 0.8rem;
+}
+
+section {
+padding: 1.5rem 1rem;
+}
+
+header {
+padding: 1.5rem 0;
+}
+}
