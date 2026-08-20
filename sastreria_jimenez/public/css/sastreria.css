@@ -1,225 +1,422 @@
 /* =====================================================
-   VARIABLES DE TEMA CLARO
+   SASTRERÍA JIMÉNEZ - Estilos principales
+   Archivo: public/css/sastreria.css
    ===================================================== */
+
+/* ---------------------------------------------------
+   VARIABLES: tema claro (por defecto)
+   --------------------------------------------------- */
 :root {
---bg-color: #f4f4f4;
---text-color: #333333;
---header-bg: #2c3e50;
---header-text: #ffffff;
---section-bg: #ffffff;
---label-color: #2c3e50;
---shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
---input-border: #cccccc;
---input-bg: #ffffff;
---input-text: #333333;
---accent: #e67e22;
---accent-hover: #d35400;
+    --bg-color: #f4f4f4;
+    --text-color: #333333;
+    --header-bg: #2c3e50;
+    --header-text: #ffffff;
+    --section-bg: #ffffff;
+    --label-color: #2c3e50;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --input-border: #cccccc;
+    --input-bg: #ffffff;
+    --input-text: #333333;
+    --accent: #e67e22;       /* color principal (naranja) */
+    --accent-hover: #d35400;
+    --success: #27ae60;      /* verde: precios, completado */
+    --danger: #e74c3c;       /* rojo: errores, cancelar */
+    --warning: #f39c12;      /* amarillo: pendiente */
+    --info: #3498db;         /* azul: confirmado */
 }
 
-/* =====================================================
-   VARIABLES DE TEMA OSCURO
-   ===================================================== */
+/* ---------------------------------------------------
+   VARIABLES: tema oscuro (se activa con body.dark-mode)
+   --------------------------------------------------- */
 body.dark-mode {
---bg-color: #1a1a1a;
---text-color: #e6e6e6;
---header-bg: #0f1419;
---header-text: #f1f1f1;
---section-bg: #2a2a2a;
---label-color: #f1f1f1;
---shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
---input-border: #444444;
---input-bg: #1f1f1f;
---input-text: #f1f1f1;
---accent: #e67e22;
---accent-hover: #d35400;
+    --bg-color: #1a1a1a;
+    --text-color: #e6e6e6;
+    --header-bg: #0f1419;
+    --header-text: #f1f1f1;
+    --section-bg: #2a2a2a;
+    --label-color: #f1f1f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    --input-border: #444444;
+    --input-bg: #1f1f1f;
+    --input-text: #f1f1f1;
+    --accent: #e67e22;
+    --accent-hover: #d35400;
 }
 
-/* =====================================================
+/* ---------------------------------------------------
    RESET Y BASE
-   ===================================================== */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+   --------------------------------------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-font-family: 'Helvetica Neue', Arial, sans-serif;
-font-size: 16px;
-line-height: 1.5;
-background-color: var(--bg-color);
-color: var(--text-color);
-transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* =====================================================
-   HEADER Y FOOTER
-   ===================================================== */
+/* ---------------------------------------------------
+   HEADER - navegación principal
+   --------------------------------------------------- */
 header {
-background-color: var(--header-bg);
-color: var(--header-text);
-text-align: center;
-padding: 2.5rem 0;
-margin-bottom: 2rem;
-transition: background-color 0.3s ease;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
 }
 
+/* Menú de navegación horizontal */
 .nav-menu {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 1.5rem;
-list-style: none;
-margin-top: 1.5rem;
-flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
-color: var(--header-text);
-text-decoration: none;
-padding: 0.5rem 1rem;
-border-radius: 5px;
-transition: background-color 0.3s;
+    color: var(--header-text);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.nav-menu a:hover {
-background-color: var(--accent);
-}
+.nav-menu a:hover { background-color: var(--accent); }
 
+/* Botón de cerrar sesión en el nav */
+.nav-btn {
+    background: none;
+    border: 1px solid var(--header-text);
+    color: var(--header-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+.nav-btn:hover { background-color: var(--accent); }
+
+/* ---------------------------------------------------
+   FOOTER
+   --------------------------------------------------- */
 footer {
-background-color: var(--header-bg);
-color: var(--header-text);
-text-align: center;
-padding: 1.5rem 0;
-margin-top: 3rem;
-transition: background-color 0.3s ease;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
 }
 
-/*BOTÓN DE TEMA (con alta especificidad para evitar conflictos)*/
+/* ---------------------------------------------------
+   BOTÓN TEMA CLARO/OSCURO
+   --------------------------------------------------- */
 button#theme-toggle.theme-toggle {
-background-color: transparent;
-border: 2px solid var(--header-text);
-color: var(--header-text);
-padding: 0;
-font-size: 1.1rem;
-border-radius: 50%;
-cursor: pointer;
-width: 42px;
-height: 42px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    background-color: transparent;
+    border: 2px solid var(--header-text);
+    color: var(--header-text);
+    padding: 0;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
 }
-
 button#theme-toggle.theme-toggle:hover {
-background-color: var(--accent);
-border-color: var(--accent);
-transform: rotate(15deg);
+    background-color: var(--accent);
+    border-color: var(--accent);
+    transform: rotate(15deg);
 }
-
+/* Alterna entre sol y luna según el tema */
 .icon-moon { display: none; }
 body.dark-mode .icon-sun { display: none; }
 body.dark-mode .icon-moon { display: inline; }
 
-/* MAIN Y SECCIONES*/
+/* ---------------------------------------------------
+   CONTENIDO PRINCIPAL
+   --------------------------------------------------- */
 main {
-max-width: 800px;
-margin: 0 auto;
-padding: 0 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Secciones con fondo y sombra */
 section {
-background-color: var(--section-bg);
-padding: 2rem;
-margin-bottom: 2rem;
-border-radius: 10px;
-box-shadow: var(--shadow);
-transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--section-bg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
 }
 
+/* Títulos con borde naranja */
 h2 {
-color: var(--label-color);
-margin-bottom: 1.5rem;
-border-bottom: 2px solid var(--accent);
-padding-bottom: 0.5rem;
-transition: color 0.3s ease;
+    color: var(--label-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
 }
 
-/*ERRORES DE VALIDACIÓN*/
+/* ---------------------------------------------------
+   MENSAJES: errores de validación y alertas flash
+   --------------------------------------------------- */
+.errores, .alerta {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    list-style: none;
+}
+
 .errores {
-background-color: #fdecea;
-border: 1px solid #f5c6cb;
-color: #842029;
-padding: 1rem 1.5rem;
-border-radius: 5px;
-margin-bottom: 1.5rem;
-list-style: none;
+    background-color: #fdecea;
+    border: 1px solid #f5c6cb;
+    color: #842029;
 }
 
-/*SERVICIOS*/
-.servicios li {
-margin-bottom: 0.5rem;
+.alerta.exito {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
 }
 
-/*FORMULARIO*/
-.campoFormulario {
-margin-bottom: 1.5rem;
+.alerta.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
 }
+
+/* ---------------------------------------------------
+   FORMULARIOS
+   --------------------------------------------------- */
+.campoFormulario { margin-bottom: 1.5rem; }
 
 label {
-display: block;
-margin-bottom: 0.5rem;
-font-weight: bold;
-color: var(--label-color);
-transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--label-color);
 }
 
-input, textarea {
-width: 100%;
-padding: 10px;
-border: 1px solid var(--input-border);
-background-color: var(--input-bg);
-color: var(--input-text);
-border-radius: 5px;
-font-family: inherit;
-transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
 }
 
-input:focus, textarea:focus {
-outline: none;
-border-color: var(--accent);
+/* ---------------------------------------------------
+   BOTONES
+   --------------------------------------------------- */
+button[type="submit"], .btn {
+    background-color: var(--accent);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover, .btn:hover { background-color: var(--accent-hover); }
+
+/* Variantes de color para botones */
+.btn-success { background-color: var(--success); }
+.btn-success:hover { background-color: #219a52; }
+.btn-danger { background-color: var(--danger); }
+.btn-danger:hover { background-color: #c0392b; }
+.btn-info { background-color: var(--info); }
+.btn-info:hover { background-color: #2980b9; }
+.btn-small { padding: 5px 12px; font-size: 0.85rem; }
+
+/* ---------------------------------------------------
+   TARJETAS DE SERVICIOS (catálogo)
+   --------------------------------------------------- */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
 }
 
-/*SOLO afecta al botón submit del formulario*/
-form > button[type="submit"] {
-background-color: var(--accent);
-color: #ffffff;
-border: none;
-padding: 12px 24px;
-font-size: 16px;
-font-weight: bold;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+.card-servicio {
+    background-color: var(--section-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+.card-servicio:hover { transform: translateY(-3px); }
+.card-servicio h3 { color: var(--accent); margin-bottom: 0.5rem; }
+
+/* Badge de tipo: confección (azul) o arreglo (amarillo) */
+.card-servicio .tipo-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.tipo-confeccion { background-color: #dbeafe; color: #1e40af; }
+.tipo-arreglo { background-color: #fef3c7; color: #92400e; }
+
+.card-servicio .precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--success);
+    margin: 0.5rem 0;
+}
+.card-servicio .acciones { margin-top: 1rem; }
+
+/* ---------------------------------------------------
+   TABLAS (admin y cliente)
+   --------------------------------------------------- */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.tabla th, .tabla td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--input-border);
+}
+.tabla th {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+.tabla tr:hover { background-color: rgba(230, 126, 34, 0.05); }
+
+/* Colores de estado de cita */
+.status-pendiente { color: var(--warning); font-weight: bold; }
+.status-confirmada { color: var(--info); font-weight: bold; }
+.status-completada { color: var(--success); font-weight: bold; }
+.status-cancelada { color: var(--danger); font-weight: bold; }
+
+/* ---------------------------------------------------
+   CALCULADORA DE PRESUPUESTO
+   --------------------------------------------------- */
+.calculadora {
+    max-width: 500px;
 }
 
-form > button[type="submit"]:hover {
-background-color: var(--accent-hover);
+.presupuesto-resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--input-border);
 }
 
-/*RESPONSIVE*/
+.presupuesto-label {
+    font-weight: bold;
+    color: var(--label-color);
+}
+
+.presupuesto-valor {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.presupuesto-total {
+    border-bottom: none;
+    border-top: 2px solid var(--accent);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.presupuesto-total .presupuesto-valor {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--success);
+}
+
+/* ---------------------------------------------------
+   HERO - banner de inicio
+   --------------------------------------------------- */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+.hero h2 { font-size: 2rem; border: none; }
+.hero p { font-size: 1.1rem; margin-top: 1rem; color: var(--text-color); opacity: 0.8; }
+
+/* Grid de info cards (contacto, servicios, etc.) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.info-card {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--section-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+.info-card h3 { color: var(--accent); margin-bottom: 0.5rem; }
+
+/* ---------------------------------------------------
+   MAPA DE GOOGLE MAPS
+   --------------------------------------------------- */
+.mapa-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* ---------------------------------------------------
+   BOTÓN FLOTANTE DE WHATSAPP
+   --------------------------------------------------- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1da851;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE - pantallas pequeñas
+   --------------------------------------------------- */
 @media (max-width: 600px) {
-.nav-menu {
-flex-direction: column;
-gap: 0.8rem;
-}
-
-section {
-padding: 1.5rem 1rem;
-}
-
-header {
-padding: 1.5rem 0;
-}
+    .nav-menu { flex-direction: column; gap: 0.8rem; }
+    section { padding: 1.5rem 1rem; }
+    header { padding: 1.5rem 0; }
+    .grid-servicios { grid-template-columns: 1fr; }
 }
